@@ -8,6 +8,11 @@ interface ImageDogs {
 }
 
 const ImageContainer: FC = () => {
+  /**
+   * Container to render images of random dogs
+   * upon scrolling to the end of the page 
+   * api call will be triggered and new image-cards will be rendered.
+   */
   const [imageUrls, setImageUrls] = useState<string[]>([]);
   
 
@@ -38,9 +43,11 @@ const ImageContainer: FC = () => {
   }, []); 
 
   return (
-    <>
+    
+    <div className="container">
       <ImageCards data={imageUrls} />
-    </>
+      </div>
+    
   );
 };
 

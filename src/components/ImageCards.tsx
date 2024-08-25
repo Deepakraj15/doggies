@@ -1,12 +1,15 @@
-import { FC, Suspense } from "react";
+import { FC} from "react";
 import { Card, CardMedia, CardContent, Typography, Grid } from "@mui/material";
-import Loading from "./Loading";
 
 interface ImageCardsProps {
   data: string[]; 
 }
 
 const ImageCards: FC<ImageCardsProps> = ({ data }) => {
+  /**
+   * takes url as props 
+   * returns image cards
+   */
   if (data.length === 0) {
     return <>Nothing here to load..</>;
   }

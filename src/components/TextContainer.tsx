@@ -2,7 +2,10 @@ import { FC, useState, useEffect } from "react";
 import axios from 'axios';
 import Cards from "./Cards";
 
-const TextContainer: FC = () => {
+const TextContainer: FC = () => { 
+/**
+ * fetches breed information along with their subbreeds and renders it in a card component
+ */
   const [breeds, setBreeds] = useState<{ [key: string]: string[] } | null>(null);
 
   const fetchTextData = async () => {
@@ -15,7 +18,7 @@ const TextContainer: FC = () => {
     }
   };
 
-  useEffect(() => {
+  useEffect(() => { // used for default loading
     fetchTextData();
   }, []);
 

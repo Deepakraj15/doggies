@@ -19,29 +19,38 @@ body{
   text-align: center;
  
 }
+h3{
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
 .container{
   display: flex;
   flex-wrap: wrap;
-}
-
-.card{
-  text-transform: capitalize;
-  margin:1em;
-  width: 10%;
- 
-}
-.reveal{
-  display: block;
-}
-.hide{
-  display: none;
 }
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px;
+  gap:10px;
 }
+
+
+.text-card{
+  text-transform: capitalize;
+  margin:1em;
+  width: 10%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  transition: translate 0.5s !important;
+  background-color:dimgray !important;
+  color: aliceblue !important;
+  
+}
+
+.text-card:hover{
+  transform: translate(10px,10px);
+}
+
 
 .dog-image {
   max-width: 100%;
@@ -53,4 +62,8 @@ body{
   min-width: 300px;
   min-height: 400px;
   max-height: 400px;
+  transition: all 0.5s;
+}
+.image-card:hover{
+  scale: 1.2;
 }
