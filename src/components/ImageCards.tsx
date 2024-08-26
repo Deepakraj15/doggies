@@ -1,5 +1,5 @@
 import { FC} from "react";
-import { Card, CardMedia, CardContent, Typography, Grid } from "@mui/material";
+import { Card, CardMedia, Grid } from "@mui/material";
 
 interface ImageCardsProps {
   data: string[]; 
@@ -26,7 +26,6 @@ const ImageCards: FC<ImageCardsProps> = ({ data }) => {
               component="img"
               alt={`Dog Image ${index}`}
               image={url}
-              title={`Dog Image ${index}`}
               loading="lazy"
             />
             

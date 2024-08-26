@@ -1,7 +1,7 @@
 import { FC, useState, useEffect } from "react";
 import axios from "axios";
 import ImageCards from "./ImageCards";
-
+import { Button } from "@mui/material";
 interface ImageDogs {
   message: string[];
   status: string;
@@ -43,11 +43,15 @@ const ImageContainer: FC = () => {
   }, []); 
 
   return (
-    
+  <>
+    <nav>
+    <h3>Random Doggies Images</h3>
+    <Button variant='contained' href="/">Go Back to Home</Button>
+    </nav>
     <div className="container">
       <ImageCards data={imageUrls} />
       </div>
-    
+      </>
   );
 };
 

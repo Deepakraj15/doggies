@@ -1,6 +1,7 @@
 import { FC, useState, useEffect } from "react";
 import axios from 'axios';
 import Cards from "./Cards";
+import Button from "@mui/material/Button";
 
 const TextContainer: FC = () => { 
 /**
@@ -25,6 +26,9 @@ const TextContainer: FC = () => {
   return (
     <>
       <h1 className="heading">Doggies Web App</h1>
+      <Button style={{marginLeft:'20px'}} variant="contained" href="/showimages">
+      Link to Second Page
+    </Button>
       <div className="container">
         {breeds ? (
           <Cards data={breeds} />
@@ -32,6 +36,7 @@ const TextContainer: FC = () => {
           <p>Loading breeds...</p>
         )}
       </div>
+      
     </>
   );
 };
